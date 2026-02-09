@@ -1,0 +1,445 @@
+/* リセットCSS */
+@import url('reset.css');
+
+/* GoogleFonts */
+@import url('https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap');
+
+/* 全体 */
+body{
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    padding: 0 15%;
+}
+
+/* リンク */
+a:link,a:active,a:visited {
+    color:#000000;
+}
+a:hover{
+    color:#cccccc;
+}
+
+/* ヒーローエリア */
+.hero{
+    background-image: url(hero.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+.hero h1{
+    font-size: 36px;
+    font-family: "Noto Serif JP", serif;
+    font-weight: lighter;
+    padding: 0 0 20px 0;
+}
+.hero p{
+    line-height: 35px;
+}
+
+/* ナビ */
+nav{
+    background: #CF3A3A;
+    color: #FFFFFF;
+    height: 100px;
+    display: flex;
+    justify-content: center; /* 左右中央 */
+    align-items: center;     /* 上下中央 */
+}
+nav h2{
+    font-size: 64px;
+    font-family: "Lovers Quarrel", cursive;
+    font-weight: lighter;
+    padding-right: 100px;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav li{
+    font-size: 25px;
+    padding-right: 30px;
+}
+nav a:link, nav a:active, nav a:visited {
+    color:#FFFFFF;
+}
+nav a:hover{
+    color:#cccccc;
+}
+
+/* About */
+.about{
+    background-image: url(about.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+}
+.about h2{
+    font-size: 36px;
+    font-family: "Noto Serif JP", serif;
+    font-weight: lighter;
+    padding: 0 0 20px 0;
+}
+.about h3{
+    font-size: 24px;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+.about p{
+    line-height: 35px;
+}
+
+/* Item */
+.item{
+    width: 100%;
+}
+.item_list{
+    display: flex;
+}
+.item_list:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.item_photo{
+    width: 50%;
+}
+.item_photo img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+.item_textbox {
+    width: 50%;
+    background: #CCCCCC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.item_text {
+    padding-left: 25%;
+}
+.item_text h3{
+    font-size: 36px;
+    font-family: "Noto Serif JP", serif;
+    font-weight: lighter;
+    padding: 0 0 20px 0;
+}
+.item_text p{
+    line-height: 25px;
+}
+
+/* Commitment */
+.commitment {
+    background-image: url(commitment.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+.commitment h2{
+    font-size: 36px;
+    font-family: "Noto Serif JP", serif;
+    font-weight: lighter;
+    padding: 0 0 20px 0;
+}
+.commitment h3{
+    font-size: 24px;
+    font-weight: normal;
+    padding-bottom: 20px;
+}
+.commitment h4{
+    font-size: 20px;
+    font-weight: normal;
+    padding: 30px 0 10px 0;
+}
+.commitment p{
+    line-height: 30px;
+}
+
+/* contact */
+.contact{
+    background: #CCCCCC;
+}
+.contact h2{
+    font-size: 36px;
+    font-family: "Noto Serif JP", serif;
+    font-weight: lighter;
+    padding: 20px 0 20px 0;
+}
+.button {
+    background: #E6E6E6;
+    max-width: 200px;
+    cursor: pointer;
+    margin: 0 auto 25px auto;
+    padding: 10px 20px;
+}
+.button:hover {
+    background: #CF3A3A;
+    color: #FFFFFF;
+}
+
+/* Works */
+.works{
+    background: #E6E6E6;
+    height: 700px;
+    display: flex;
+}
+.works_box {
+    display: flex;
+    align-items: center;     /* 上下中央 */
+    padding: 0 15%;
+}
+.works_text h3{
+    font-size: 32px;
+    font-family: "Noto Serif JP", serif;
+    margin: 20px 0;
+}
+
+.works_text{
+    line-height: 25px;
+}
+.works_text p{
+    padding-bottom: 20px;
+}
+.works_text ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+.works_text ul li{
+    display: inline;
+}
+.works_text ul li::after {
+    content: "/";
+    margin: 0 5px;
+    color: #000000;
+}
+.works_text ul li:last-child::after {
+    content: "";
+}
+
+/* フッター */
+footer{
+    background: #CF3A3A;
+    color: #FFFFFF;
+    height: 100px;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* 左右中央 */
+    align-items: center;     /* 上下中央 */
+    line-height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+
+    /* 固定高さ解除 */
+    .hero, nav, .about, .commitment, .contact, .works, footer {
+        height: auto;
+    }
+
+    /* 全体の余白 */
+    .box {
+        padding: 5%;
+    }
+
+    /* ヒーローエリア */
+    .hero {
+        background-size: 100% 100%;
+    }
+    .hero h1 {
+        font-size: 25px;
+    }
+    .hero p {
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    /* ナビ */
+    nav {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    nav h2 {
+        padding-right: 0;
+        margin-bottom: 10px;
+        font-size: 48px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav li {
+        padding-right: 0;
+    }
+
+    /* About */
+    .about {
+        background-size: cover;
+    }
+    .about h2 {
+        font-size: 28px;
+    }
+
+    /* Item */
+    .item_list {
+        flex-direction: column !important; /* PC の row-reverse を上書き */
+    }
+    .item_photo, .item_textbox {
+        width: 100%;
+    }
+    .item_text {
+        padding: 20px 50px;
+    }
+    .item_text h3 {
+        font-size: 28px;
+    }
+
+    /* Commitment */
+    .commitment {
+        background-size: cover;
+    }
+
+    /* Works */
+    .works_box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .works_image img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+    .works_text {
+        text-align: center;
+    }
+    .works_text ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .works_text ul li::after {
+        content: "";
+    }
+    .works_text h3 {
+        font-size: 25px;
+        padding-top: 20px;
+    }
+
+    /* footer */
+    footer{
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 13px;
+    }
+
+    /* 固定高さ解除 */
+    .hero, nav, .about, .commitment, .contact, .works, footer {
+        height: auto;
+    }
+
+    /* 全体の余白 */
+    .box {
+        padding: 5%;
+    }
+
+    /* ヒーローエリア */
+    .hero {
+        background-size: cover;
+    }
+    .hero h1 {
+        font-size: 24px;
+    }
+    .hero p {
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    /* ナビ */
+    nav {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    nav h2 {
+        padding-right: 0;
+        margin-bottom: 10px;
+        font-size: 48px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav li {
+        padding-right: 0;
+    }
+
+    /* About */
+    .about {
+        background-size: cover;
+    }
+    .about h2 {
+        font-size: 28px;
+    }
+
+    /* Item */
+    .item_list {
+        flex-direction: column !important; /* PC の row-reverse を上書き */
+    }
+    .item_photo, .item_textbox {
+        width: 100%;
+    }
+    .item_text {
+        padding-left: 0;
+        padding: 20px;
+    }
+    .item_text h3 {
+        font-size: 28px;
+    }
+
+    /* Commitment */
+    .commitment {
+        background-size: cover;
+    }
+
+    /* Works */
+    .works_box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .works_image img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+    .works_text {
+        text-align: center;
+    }
+    .works_text ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .works_text ul li::after {
+        content: "";
+    }
+    .works_text h3 {
+        font-size: 18px;
+    }
+
+    /* footer */
+    footer{
+        font-size: 10px;
+        height: 50px;
+    }
+}
