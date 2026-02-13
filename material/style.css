@@ -201,7 +201,6 @@ nav a:hover{
     font-family: "Noto Serif JP", serif;
     margin: 20px 0;
 }
-
 .works_text{
     line-height: 25px;
 }
@@ -319,6 +318,7 @@ footer{
     .works_box {
         flex-direction: column;
         align-items: flex-start;
+        padding: 0 5%;
     }
     .works_image img {
         width: 250px;
@@ -411,6 +411,7 @@ footer{
     /* Works */
     .works {
         height: auto;
+        margin: 0;
     }
     .works ul {
         flex-wrap: wrap;
@@ -418,6 +419,7 @@ footer{
     .works_box {
         flex-direction: column;
         align-items: flex-start;
+        padding: 0 5%;
     }
     .works_image img {
         width: 250px;
@@ -434,5 +436,3 @@ footer{
         height: 50px;
     }
 }
-
-
