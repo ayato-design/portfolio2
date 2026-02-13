@@ -323,7 +323,7 @@ footer{
     .works_image img {
         width: 250px;
         height: 250px;
-        margin-bottom: 20px;
+        margin: 0 auto 20px auto;
     }
     .works_text h3 {
         font-size: 25px;
@@ -424,7 +424,7 @@ footer{
     .works_image img {
         width: 250px;
         height: 250px;
-        margin-bottom: 20px;
+        margin: 0 auto 20px auto;
     }
     .works_text h3 {
         font-size: 18px;
