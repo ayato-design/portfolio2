@@ -312,7 +312,6 @@ footer{
     /* Works */
     .works {
         height: auto;
-        padding: 50px 5%;
     }
     .works ul {
         flex-wrap: wrap;
@@ -412,7 +411,6 @@ footer{
     /* Works */
     .works {
         height: auto;
-        padding: 50px 5%;
     }
     .works ul {
         flex-wrap: wrap;
@@ -436,4 +434,5 @@ footer{
         height: 50px;
     }
 }
+
 
