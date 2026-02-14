@@ -8,8 +8,9 @@
    <meta name="viewport" content="width=device-width,initial-scale=1">
  </head>
  <body>
-    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
-    <section class="hero">
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <script src="material/java.js"></script>
+    <section class="hero" id="top">
     <div class="box">
     <h1>書くことで、日常が形になる。</h1>
     <p>書くことで、日常が形になる。<br>
@@ -121,6 +122,7 @@
         <li><a href="https://unsplash.com/ja" target="_blank">Unsplash</a></li>
         <li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a></li>
         <li><a href="https://teach.web-represent.link/sudden-error-in-smooth-scrolling-implementation/" target="_blank">WEBデザインMATOME</a></li>
+        <li><a href="https://sacochan-design.com/" target="_blank">SACOCHAN-DESIGN.COM</a></li>
     </ul>
         <p>参考デザイン</p>
         <ul>
@@ -133,25 +135,9 @@
   </div>
 </section>
 </main>
+<div class="back_button"><a href="#top">↑<br>Top</a></div>
 <footer>
     <p>© 2026 Portfolio Study & Practice Project<br>This site is a personal learning project.</p>
 </footer>
-<script>
-// スムーススクロール(元：WEBデザインMATOME)
-$(function() {
-  $('a[href^="#"]').on('click', function(e) {
-    const href = $(this).attr('href');
-    // 空の # は無視
-    if (href === "#") return;
-    // 対象要素が存在しない場合も無視
-    const $target = $(href);
-    if ($target.length === 0) return;
-    e.preventDefault();
-    $('html, body').animate({
-      scrollTop: $target.offset().top
-    }, 500, 'linear');
-  });
-});
-</script>
  </body>
 </html>
