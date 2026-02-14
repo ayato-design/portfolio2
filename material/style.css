@@ -15,7 +15,7 @@ body{
     padding: 0 15%;
 }
 
-/*ボタンのスタイル調整*/
+/* 戻るボタン */
 .back_button {
     font-size: 14px;
     font-family: "Orbitron", sans-serif;
@@ -287,6 +287,13 @@ footer{
     .box {
         padding: 5%;
     }
+
+    /* 戻るボタン */
+    .back_button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
 
     /* ヒーローエリア */
     .hero {
