@@ -27,7 +27,7 @@ HTML / CSS の基礎理解と、レイアウト・余白設計の練習を目的
 ## 素材提供
 - Unsplash
 - Google Fonts
-- jQuery
+- HTML5 Dotcor
 - WEBデザインMATOME
 - SACOCHAN-DESIGN.COM
 
@@ -36,4 +36,5 @@ WAVEのLPデザイン
 
 ## 補足
 本作品は学習目的の模写であり、商用利用はしていません。
+
 
