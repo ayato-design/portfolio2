@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+ <head>
+      <link rel="stylesheet" href="material/style.css">
+      <link rel="icon" href="material/favicon.ico">
+   <title>ink and line(Study Project)：Contact</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1">
+ </head>
+ <body>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <script src="material/java.js"></script>
+
+<nav>
+    <h2><a href="index.html">ink and line</a></h2>
+    <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#item">Item</a></li>
+        <li><a href="index.html#commitment">Commitment</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="index.html#works">Works</a></li>
+    </ul>
+</nav>
+<main>
+<section class="mailform">
+    <div class="box">
+        <h2>CONTACT</h2>
+        <div class="mailform_text">
+            <p>この度はink and lineのお問い合わせページにアクセス有り難う御座います。</p>
+            <p>下記フォームに必須事項を入力の上、送信ボタンを押して下さい。</p>
+            <p>営業3日以内に、入力して頂いたメールアドレスに返信させて頂きます。</p>
+            <p>お電話でのお問い合わせは、<span class="tel">01-2345-6789</span>迄宜しくお願いします。</p>
+            <p>※受付時間：平日9:00〜18:00(土日祝定休日)</p>
+        </div>
+        <p><span class="red">*</span>=必須項目</p>
+        <form action="#">
+            <div class="form_item">
+                <label>お名前<span class="red">*</span></label>
+                <input type="text" name="name" placeholder="例：インク 太郎" required>
+            </div>
+            <div class="form_item">
+                <label>フリガナ<span class="red">*</span></label>
+                <input type="text" name="katakana" placeholder="例：インク タロウ" pattern="^[\u30A0-\u30FF\u3000]+$" required>
+            </div>
+            <div class="form_item">
+                <label>郵便番号</label>
+                <input type="text" name="add_number" placeholder="例：103-0124" pattern="\d{3}-\d{4}">
+            </div>
+            <div class="form_item">
+                <label>住所</label>
+                <input type="text" name="add_full" placeholder="例：東京都渋谷区桜丘町99-9 West Building 3F">
+            </div>
+            <div class="form_item">
+                <label>電話番号</label>
+                <input type="tel" name="tel_number" placeholder="例：01-2345-6789" pattern="\d{2,4}-\d{2,4}-\d{3,4}">
+            </div>
+            <div class="form_item">
+                <label>メールアドレス<span class="red">*</span></label>
+                <input type="email" name="email" placeholder="例：sample@ink_and_line.jp" required>
+            </div>
+            <div class="form_item">
+                <label class="message">お問い合わせ内容<span class="red">*</span></label>
+                <textarea name="message" rows="5" required></textarea>
+            </div>
+            <input type="submit" value="送信">
+        </form>
+    </div>
+</section>
+</main>
+<footer>
+    <p>© 2026 Portfolio Study & Practice Project<br>This site is a personal learning project.</p>
+</footer>
+ </body>
+</html>
