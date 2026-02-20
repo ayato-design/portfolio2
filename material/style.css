@@ -9,10 +9,10 @@ body{
     font-size: 16px;
     font-family: "Noto Sans JP", sans-serif;
 }
-.box{
-    display: flex;
-    flex-direction: column;
-    padding: 0 15%;
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
 }
 
 /* 戻るボタン */
@@ -51,14 +51,6 @@ body{
     transform: translateY(0);
 }
 
-/* リンク */
-a:link,a:active,a:visited {
-    color:#000000;
-}
-a:hover{
-    color:#cccccc;
-}
-
 /* ヒーローエリア */
 .hero{
     background-image: url(hero.png);
@@ -67,6 +59,11 @@ a:hover{
     height: 600px;
     display: flex;
     align-items: center;
+}
+.hero_box{
+    display: flex;
+    flex-direction: column;
+    padding: 0 15%;
 }
 .hero h1{
     font-size: 36px;
@@ -87,7 +84,7 @@ nav{
     justify-content: center; /* 左右中央 */
     align-items: center;     /* 上下中央 */
 }
-nav h2{
+nav h1{
     font-size: 64px;
     font-family: "Lovers Quarrel", cursive;
     font-weight: lighter;
@@ -107,9 +104,25 @@ nav a:link, nav a:active, nav a:visited {
 nav a:hover{
     color:#cccccc;
 }
-nav h2 a {
+nav h1 a {
     color: #FFFFFF;
     text-decoration: none;
+}
+nav h1 a:hover{
+    color:#FFFFFF;
+}
+
+/* 共通見出(h2-h3) */
+h2{
+    font-size: 36px;
+    font-family: "Noto Serif JP", serif;
+    font-weight: lighter;
+    padding: 0 0 20px 0;
+}
+h3{
+    font-size: 24px;
+    font-weight: normal;
+    padding-bottom: 10px;
 }
 
 /* About */
@@ -121,16 +134,10 @@ nav h2 a {
     display: flex;
     align-items: center;
 }
-.about h2{
-    font-size: 36px;
-    font-family: "Noto Serif JP", serif;
-    font-weight: lighter;
-    padding: 0 0 20px 0;
-}
-.about h3{
-    font-size: 24px;
-    font-weight: normal;
-    padding-bottom: 10px;
+.about_box{
+    display: flex;
+    flex-direction: column;
+    padding: 0 15%;
 }
 .about p{
     line-height: 35px;
@@ -149,11 +156,6 @@ nav h2 a {
 .item_photo{
     width: 50%;
 }
-.item_photo img{
-    max-width: 100%;
-    height: auto;
-    vertical-align: bottom;
-}
 .item_textbox {
     width: 50%;
     background: #CCCCCC;
@@ -163,12 +165,6 @@ nav h2 a {
 }
 .item_text {
     padding-left: 10%;
-}
-.item_text h3{
-    font-size: 36px;
-    font-family: "Noto Serif JP", serif;
-    font-weight: lighter;
-    padding: 0 0 20px 0;
 }
 .item_text p{
     line-height: 25px;
@@ -183,16 +179,10 @@ nav h2 a {
     display: flex;
     align-items: center;
 }
-.commitment h2{
-    font-size: 36px;
-    font-family: "Noto Serif JP", serif;
-    font-weight: lighter;
-    padding: 0 0 20px 0;
-}
-.commitment h3{
-    font-size: 24px;
-    font-weight: normal;
-    padding-bottom: 20px;
+.commitment_box{
+    display: flex;
+    flex-direction: column;
+    padding: 0 15%;
 }
 .commitment h4{
     font-size: 20px;
@@ -207,10 +197,12 @@ nav h2 a {
 .contact{
     background: #CCCCCC;
 }
+.contact_box{
+    display: flex;
+    flex-direction: column;
+    padding: 0 15%;
+}
 .contact h2{
-    font-size: 36px;
-    font-family: "Noto Serif JP", serif;
-    font-weight: lighter;
     padding: 20px 0 20px 0;
 }
 .button {
@@ -236,18 +228,18 @@ nav h2 a {
     align-items: center;     /* 上下中央 */
     padding: 0 15%;
 }
-.works_text h3{
+.works_text h3 {
     font-size: 32px;
     font-family: "Noto Serif JP", serif;
     margin: 20px 0;
 }
-.works_text{
+.works_text {
     line-height: 25px;
 }
-.works_text p{
+.works_text p {
     padding-bottom: 20px;
 }
-.works_text ul{
+.works_text ul {
     display: flex;
     align-items: center;
     list-style: none;
@@ -255,7 +247,7 @@ nav h2 a {
     margin-top: -20px;
     margin-bottom: 20px;
 }
-.works_text ul li{
+.works_text ul li {
     display: inline;
 }
 .works_text ul li::after {
@@ -266,9 +258,15 @@ nav h2 a {
 .works_text ul li:last-child::after {
     content: "";
 }
+.works_text a {
+    color:#000000;
+}
+.works_text a:hover {
+    color:#cccccc;
+}
 
 /* フッター */
-footer{
+footer {
     background: #CF3A3A;
     color: #FFFFFF;
     height: 100px;
@@ -281,10 +279,10 @@ footer{
 }
 
 /* CONTACT */
-.mailform h2{
-    font-size: 36px;
-    font-family: "Noto Serif JP", serif;
-    font-weight: lighter;
+.mailform {
+    padding: 0 15%;
+}
+.mailform h2 {
     padding: 30px 0 20px 0;
 }
 .mailform p {
@@ -330,15 +328,10 @@ input[type="submit"] {
 }
 
 @media screen and (max-width: 1024px) {
-
+    
     /* 固定高さ解除 */
     .hero, nav, .about, .commitment, .contact, .works, footer {
         height: auto;
-    }
-
-    /* 全体の余白 */
-    .box {
-        padding: 5%;
     }
 
     /* 戻るボタン */
@@ -346,11 +339,14 @@ input[type="submit"] {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-}
+    }
 
     /* ヒーローエリア */
     .hero {
         background-size: 100% 100%;
+    }
+    .hero_box {
+    padding: 5%;
     }
     .hero h1 {
         font-size: 25px;
@@ -381,6 +377,9 @@ input[type="submit"] {
     /* About */
     .about {
         background-size: cover;
+    }
+    .about_box {
+    padding: 5%;
     }
     .about h2 {
         font-size: 28px;
@@ -404,6 +403,9 @@ input[type="submit"] {
     .commitment {
         background-size: cover;
     }
+    .commitment_box {
+    padding: 5%;
+    }
 
     /* Works */
     .works {
@@ -423,9 +425,9 @@ input[type="submit"] {
         margin: 30px auto 0 auto;
     }
     .works_image img{
-    max-width: 100%;
-    height: auto;
-    vertical-align: bottom;
+        max-width: 100%;
+        height: auto;
+        vertical-align: bottom;
     }
     .works_text h3 {
         font-size: 25px;
@@ -446,22 +448,12 @@ input[type="submit"] {
     }
     .form_item input, .form_item textarea {
         width: 95%;
-}
+    }
 }
 
 @media screen and (max-width: 768px) {
     body {
         font-size: 13px;
-    }
-
-    /* 固定高さ解除 */
-    .hero, nav, .about, .commitment, .contact, .works, footer {
-        height: auto;
-    }
-
-    /* 全体の余白 */
-    .box {
-        padding: 5%;
     }
 
     /* ヒーローエリア */
@@ -476,24 +468,6 @@ input[type="submit"] {
         line-height: 28px;
     }
 
-    /* ナビ */
-    nav {
-        flex-direction: column;
-        padding: 20px 0;
-    }
-    nav h2 {
-        padding-right: 0;
-        margin-bottom: 10px;
-        font-size: 48px;
-    }
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-    nav li {
-        padding-right: 0;
-    }
-
     /* About */
     .about {
         background-size: cover;
@@ -503,12 +477,6 @@ input[type="submit"] {
     }
 
     /* Item */
-    .item_list {
-        flex-direction: column !important; /* PC の row-reverse を上書き */
-    }
-    .item_photo, .item_textbox {
-        width: 100%;
-    }
     .item_text {
         padding-left: 0;
         padding: 20px;
@@ -523,27 +491,6 @@ input[type="submit"] {
     }
 
     /* Works */
-    .works {
-        height: auto;
-        padding: 0 5%;
-    }
-    .works ul {
-        flex-wrap: wrap;
-    }
-    .works_box {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0;
-    }
-    .works_image {
-        width: 60%;
-        margin: 30px auto 0 auto;
-    }
-    .works_image img{
-    max-width: 100%;
-    height: auto;
-    vertical-align: bottom;
-    }
     .works_text h3 {
         font-size: 18px;
     }
