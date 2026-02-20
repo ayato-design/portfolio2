@@ -205,14 +205,14 @@ h3{
 .contact h2{
     padding: 20px 0 20px 0;
 }
-.button {
+.contact a {
     background: #E6E6E6;
+    color: #000000;
     max-width: 200px;
-    cursor: pointer;
     margin: 0 auto 25px auto;
     padding: 10px 20px;
 }
-.button:hover {
+.contact a:hover {
     background: #CF3A3A;
     color: #FFFFFF;
 }
@@ -359,19 +359,23 @@ input[type="submit"] {
     /* ナビ */
     nav {
         flex-direction: column;
-        padding: 20px 0;
+        align-items: flex-start;
+        padding: 20px 5%;
     }
-    nav h2 {
+    nav h1 {
+        font-size: 48px;
         padding-right: 0;
         margin-bottom: 10px;
-        font-size: 48px;
     }
     nav ul {
-        flex-direction: column;
-        gap: 10px;
+        flex-wrap: wrap;
+        padding: 0;
     }
     nav li {
-        padding-right: 0;
+        font-size: 16px;
+        padding-left: 0;
+        padding-right: 20px;
+        margin-bottom: 10px;
     }
 
     /* About */
@@ -501,4 +505,3 @@ input[type="submit"] {
         height: 50px;
     }
 }
-
