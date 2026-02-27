@@ -6,7 +6,7 @@
 
 /* 全体 */
 body{
-    font-size: 16px;
+    font-size: 14px;
     font-family: "Noto Sans JP", sans-serif;
 }
 img{
@@ -59,11 +59,11 @@ img{
     height: 600px;
     display: flex;
     align-items: center;
+    padding: 0 15%;
 }
 .hero_box{
     display: flex;
     flex-direction: column;
-    padding: 0 15%;
 }
 .hero h1{
     font-size: 36px;
@@ -133,11 +133,11 @@ h3{
     height: 700px;
     display: flex;
     align-items: center;
+    padding: 0 15%;
 }
 .about_box{
     display: flex;
     flex-direction: column;
-    padding: 0 15%;
 }
 .about p{
     line-height: 35px;
@@ -175,41 +175,35 @@ h3{
     background-image: url(commitment.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 500px;
-    display: flex;
-    align-items: center;
-}
-.commitment_box{
-    display: flex;
-    flex-direction: column;
     padding: 0 15%;
 }
-.commitment h4{
+.commitment_box {
+    padding: 50px 0;
+}
+.commitment h4 {
     font-size: 20px;
     font-weight: normal;
     padding: 30px 0 10px 0;
 }
-.commitment p{
+.commitment p {
     line-height: 30px;
 }
 
 /* contact */
-.contact{
+.contact {
     background: #CCCCCC;
-}
-.contact_box{
-    display: flex;
-    flex-direction: column;
     padding: 0 15%;
 }
-.contact h2{
-    padding: 20px 0 20px 0;
+.contact_box {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
 }
 .contact a {
     background: #E6E6E6;
     color: #000000;
     max-width: 200px;
-    margin: 0 auto 25px auto;
+    margin: 0 auto;
     padding: 10px 20px;
 }
 .contact a:hover {
@@ -220,13 +214,13 @@ h3{
 /* Works */
 .works{
     background: #E6E6E6;
-    height: 700px;
     display: flex;
+    padding: 0 15%;
 }
 .works_box {
     display: flex;
     align-items: center;     /* 上下中央 */
-    padding: 0 15%;
+    padding: 50px 0;
 }
 .works_text h3 {
     font-size: 32px;
@@ -270,7 +264,6 @@ footer {
     background: #CF3A3A;
     color: #FFFFFF;
     height: 100px;
-    font-size: 14px;
     text-align: center;
     display: flex;
     justify-content: center; /* 左右中央 */
@@ -330,30 +323,29 @@ input[type="submit"] {
 @media screen and (max-width: 1024px) {
     
     /* 固定高さ解除 */
-    .hero, nav, .about, .commitment, .contact, .works, footer {
+    .hero, nav, .about, .works {
         height: auto;
     }
 
     /* 戻るボタン */
     .back_button {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
     }
 
     /* ヒーローエリア */
-    .hero {
-        background-size: 100% 100%;
+    .hero{
+        padding: 0 5%;
     }
     .hero_box {
-    padding: 5%;
+        padding: 30px 0;
     }
-    .hero h1 {
+    .hero h1{
         font-size: 25px;
     }
-    .hero p {
-        font-size: 14px;
-        line-height: 28px;
+    .hero p{
+        line-height: 25px;
     }
 
     /* ナビ */
@@ -379,11 +371,12 @@ input[type="submit"] {
     }
 
     /* About */
-    .about {
+    .about{
         background-size: cover;
+        padding: 0 5%;
     }
     .about_box {
-    padding: 5%;
+        padding: 30px 0;
     }
     .about h2 {
         font-size: 28px;
@@ -406,14 +399,14 @@ input[type="submit"] {
     /* Commitment */
     .commitment {
         background-size: cover;
+        padding: 0 5%;
     }
     .commitment_box {
-    padding: 5%;
+        padding: 30px 0;
     }
 
     /* Works */
     .works {
-        height: auto;
         padding: 0 5%;
     }
     .works ul {
@@ -422,19 +415,16 @@ input[type="submit"] {
     .works_box {
         flex-direction: column;
         align-items: flex-start;
-        padding: 0;
+        padding: 30px 0;
     }
-    .works_image {
-        width: 60%;
-        margin: 30px auto 0 auto;
-    }
-    .works_image img{
-        max-width: 100%;
-        height: auto;
-        vertical-align: bottom;
+    .works_image img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 20px;
     }
     .works_text h3 {
         font-size: 25px;
+        padding-bottom: 0;
     }
 
     /* footer */
@@ -443,6 +433,12 @@ input[type="submit"] {
     }
     
     /* CONTACT */
+    .contact {
+        padding: 0 5%;
+    }
+    .contact_box {
+        padding: 30px 0;
+    }
     .mailform {
         padding: 0 5%;
     }
@@ -456,52 +452,14 @@ input[type="submit"] {
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        font-size: 13px;
-    }
-
+    
     /* ヒーローエリア */
-    .hero {
-        background-size: cover;
-    }
-    .hero h1 {
-        font-size: 24px;
-    }
-    .hero p {
-        font-size: 14px;
-        line-height: 28px;
+    .hero h1{
+        font-size: 23px;
     }
 
     /* About */
-    .about {
-        background-size: cover;
-    }
     .about h2 {
         font-size: 28px;
-    }
-
-    /* Item */
-    .item_text {
-        padding-left: 0;
-        padding: 20px;
-    }
-    .item_text h3 {
-        font-size: 28px;
-    }
-
-    /* Commitment */
-    .commitment {
-        background-size: cover;
-    }
-
-    /* Works */
-    .works_text h3 {
-        font-size: 18px;
-    }
-
-    /* footer */
-    footer{
-        font-size: 10px;
-        height: 50px;
     }
 }
