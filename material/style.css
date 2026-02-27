@@ -417,10 +417,9 @@ input[type="submit"] {
         align-items: flex-start;
         padding: 30px 0;
     }
-    .works_image img {
-        width: 250px;
-        height: 250px;
-        margin-bottom: 20px;
+    .works_image {
+        width: 60%;
+        margin: 30px auto 0 auto;
     }
     .works_text h3 {
         font-size: 25px;
