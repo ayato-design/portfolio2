@@ -303,6 +303,7 @@ h3 {
 footer {
     background: #CF3A3A;
     color: #FFFFFF;
+    font-size: 12px;
     height: 100px;
     text-align: center;
     display: flex;
@@ -503,3 +504,4 @@ input[type="submit"] {
         font-size: 28px;
     }
 }
+
