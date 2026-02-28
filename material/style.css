@@ -344,6 +344,9 @@ footer {
     border: 1px solid #cccccc;
     border-radius: 4px;
 }
+.form_item textarea {
+    height: 250px;
+}
 input[type="submit"] {
     background: #FFFFFF;
     width: 100%;
@@ -504,4 +507,3 @@ input[type="submit"] {
         font-size: 28px;
     }
 }
-
