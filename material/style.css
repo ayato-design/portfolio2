@@ -51,6 +51,34 @@ img {
     transform: translateY(0);
 }
 
+/* リンク */
+a {
+    color:#000000;
+}
+a:hover {
+    color:#cccccc;
+}
+
+/* パンくずリスト */
+.pan_list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+.pan_list li {
+    display: inline;
+}
+.pan_list li::after {
+    content: ">";
+    margin: 0 5px;
+    color: #000000;
+}
+.pan_list li:last-child::after {
+    content: "";
+}
+
 /* ヒーローエリア */
 .hero {
     background-image: url(hero.png);
@@ -261,12 +289,6 @@ h3 {
 .works_text ul li:last-child::after {
     content: "";
 }
-.works_text a {
-    color:#000000;
-}
-.works_text a:hover {
-    color:#cccccc;
-}
 
 /* フッター */
 footer {
@@ -284,8 +306,8 @@ footer {
 .mailform {
     padding: 0 15%;
 }
-.mailform h2 {
-    padding: 30px 0 20px 0;
+.mailform_box {
+    padding: 30px 0;
 }
 .mailform p {
     line-height: 25px;
