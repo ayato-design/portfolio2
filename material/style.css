@@ -51,6 +51,25 @@ img {
     transform: translateY(0);
 }
 
+/* ボタン */
+.button a {
+    background: #FFFFFF;
+    color: #000000;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 200px;
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+}
+.button a:hover {
+    background: #CF3A3A;
+    color: #FFFFFF;
+}
+
 /* リンク */
 a {
     color:#000000;
@@ -237,17 +256,6 @@ h3 {
     flex-direction: column;
     padding: 50px 0;
 }
-.contact a {
-    background: #E6E6E6;
-    color: #000000;
-    max-width: 200px;
-    margin: 0 auto;
-    padding: 10px 20px;
-}
-.contact a:hover {
-    background: #CF3A3A;
-    color: #FFFFFF;
-}
 
 /* Works */
 .works {
@@ -305,6 +313,7 @@ footer {
 
 /* CONTACT */
 .mailform {
+    background: #E6E6E6;
     padding: 0 15%;
 }
 .mailform_box {
