@@ -9,6 +9,9 @@ body {
     font-size: 14px;
     font-family: "Noto Sans JP", sans-serif;
 }
+p {
+    line-height: 1.5;
+}
 img {
     max-width: 100%;
     height: auto;
@@ -17,11 +20,11 @@ img {
 
 /* 戻るボタン */
 .back_button {
-    font-size: 14px;
+    font-size: 16px;
     font-family: "Orbitron", sans-serif;
     text-align: center;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background: #CF3A3A;
     position: fixed;
@@ -40,7 +43,6 @@ img {
     width: 100%;
     height: 100%;
     text-decoration: none;
-    font-size: 25px;
     transition: all .5s ease;
 }
 .back_button a:hover {
@@ -187,9 +189,6 @@ h3 {
     display: flex;
     flex-direction: column;
 }
-.about p {
-    line-height: 35px;
-}
 
 /* Item */
 .item {
@@ -214,9 +213,6 @@ h3 {
 .item_text {
     padding-left: 10%;
 }
-.item_text p{
-    line-height: 25px;
-}
 
 /* Commitment */
 .commitment {
@@ -232,9 +228,6 @@ h3 {
     font-size: 20px;
     font-weight: normal;
     padding: 30px 0 10px 0;
-}
-.commitment p {
-    line-height: 30px;
 }
 .marker {
     background:linear-gradient(transparent 80%, #CF3A3A 0%);
@@ -320,9 +313,6 @@ footer {
 .mailform_box {
     padding: 30px 0;
 }
-.mailform p {
-    line-height: 25px;
-}
 .mailform_text {
     padding-bottom: 30px;
 }
@@ -372,13 +362,6 @@ input[type="submit"] {
         height: auto;
     }
 
-    /* 戻るボタン */
-    .back_button {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-    }
-
     /* ヒーローエリア */
     .hero{
         padding: 0 5%;
@@ -389,10 +372,7 @@ input[type="submit"] {
     .hero h1{
         font-size: 25px;
     }
-    .hero p{
-        line-height: 25px;
-    }
-
+    
     /* ナビ */
     nav {
         flex-direction: column;
@@ -497,6 +477,11 @@ input[type="submit"] {
 
 @media screen and (max-width: 768px) {
     
+     /* 戻るボタン */
+    .back_button {
+    right: 10px;
+    bottom: 10px;
+}
     /* ヒーローエリア */
     .hero h1{
         font-size: 23px;
