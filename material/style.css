@@ -17,6 +17,12 @@ img {
     height: auto;
     vertical-align: bottom;
 }
+a {
+    color:#000000;
+}
+a:hover {
+    color:#cccccc;
+}
 
 /* 戻るボタン */
 .back_button {
@@ -25,7 +31,7 @@ img {
     text-align: center;
     width: 60px;
     height: 60px;
-    border-radius: 50%;
+    border-radius: 20%;
     background: #CF3A3A;
     position: fixed;
     right: 20px;
@@ -53,6 +59,49 @@ img {
     transform: translateY(0);
 }
 
+/* 共通見出し */
+h2 {
+    font-size: 36px;
+    font-family: "Noto Serif JP", serif;
+    font-weight: lighter;
+    padding: 0 0 20px 0;
+}
+h3 {
+    font-size: 20px;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+/* 共通パーツ */
+.top_content {
+    padding: 0 15%;
+}
+.main_content {
+    padding-top: 30px;
+}
+.main_content_end {
+    padding: 30px 0;
+}
+.main_text {
+    padding-top: 10px;
+}
+.normal_list { /* 斜線横並びリスト */
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.normal_list li {
+    padding-top: 5px;
+}
+.normal_list li::after {
+    color: #000000;
+    content: "/";
+    margin: 0 5px;
+}
+.normal_list li:last-child::after {
+    content: "";
+}
+
 /* ボタン */
 .button a {
     background: #FFFFFF;
@@ -72,32 +121,22 @@ img {
     color: #FFFFFF;
 }
 
-/* リンク */
-a {
-    color:#000000;
-}
-a:hover {
-    color:#cccccc;
-}
-
 /* パンくずリスト */
-.pan_list {
+.pan_list ul {
     font-size: 12px;
-    display: flex;
-    align-items: center;
     list-style: none;
+    display: flex;
     flex-wrap: wrap;
-    padding-bottom: 30px;
+    padding-top: 10px;
 }
-.pan_list li {
-    display: inline;
+.pan_list ul li {
+    padding-top: 5px;
 }
-.pan_list li::after {
+.pan_list ul li::after {
     content: ">";
     margin: 0 5px;
-    color: #000000;
 }
-.pan_list li:last-child::after {
+.pan_list ul li:last-child::after {
     content: "";
 }
 
@@ -109,20 +148,19 @@ a:hover {
     height: 600px;
     display: flex;
     align-items: center;
-    padding: 0 15%;
 }
 .hero_box {
     display: flex;
     flex-direction: column;
 }
-.hero h1 {
+.hero_box p {
+    line-height: 35px;
+}
+.hero_title {
     font-size: 36px;
     font-family: "Noto Serif JP", serif;
     font-weight: lighter;
     padding: 0 0 20px 0;
-}
-.hero p {
-    line-height: 35px;
 }
 
 /* ナビ */
@@ -162,19 +200,6 @@ nav h1 a:hover {
     color:#FFFFFF;
 }
 
-/* 共通見出(h2-h3) */
-h2 {
-    font-size: 36px;
-    font-family: "Noto Serif JP", serif;
-    font-weight: lighter;
-    padding: 0 0 20px 0;
-}
-h3 {
-    font-size: 24px;
-    font-weight: normal;
-    padding-bottom: 10px;
-}
-
 /* About */
 .about {
     background-image: url(about.png);
@@ -183,7 +208,6 @@ h3 {
     height: 700px;
     display: flex;
     align-items: center;
-    padding: 0 15%;
 }
 .about_box {
     display: flex;
@@ -219,10 +243,6 @@ h3 {
     background-image: url(commitment.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    padding: 0 15%;
-}
-.commitment_box {
-    padding: 50px 0;
 }
 .commitment h4 {
     font-size: 20px;
@@ -242,54 +262,38 @@ h3 {
 /* contact */
 .contact {
     background: #CCCCCC;
-    padding: 0 15%;
 }
 .contact_box {
     display: flex;
     flex-direction: column;
-    padding: 50px 0;
 }
 
-/* Works */
+/* works */
 .works {
     background: #E6E6E6;
-    display: flex;
-    padding: 0 15%;
 }
 .works_box {
     display: flex;
-    align-items: center;     /* 上下中央 */
-    padding: 50px 0;
+    gap: 30px;
+    align-items: center;
 }
 .works_text h3 {
     font-size: 32px;
     font-family: "Noto Serif JP", serif;
     margin: 20px 0;
 }
-.works_text {
-    line-height: 25px;
+.works_text h4 {
+    font-weight: normal;
+    display: inline-block;
+    border: 1px solid #000000;
+    padding: 5px;
+    margin-top: 15px;
 }
-.works_text p {
-    padding-bottom: 20px;
+.works_text a {
+    color:#000000;
 }
-.works_text ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    flex-wrap: wrap;
-    margin-top: -20px;
-    margin-bottom: 20px;
-}
-.works_text ul li {
-    display: inline;
-}
-.works_text ul li::after {
-    content: "/";
-    margin: 0 5px;
-    color: #000000;
-}
-.works_text ul li:last-child::after {
-    content: "";
+.works_text a:hover {
+    color:#cccccc;
 }
 
 /* フッター */
@@ -308,10 +312,6 @@ footer {
 /* CONTACT */
 .mailform {
     background: #E6E6E6;
-    padding: 0 15%;
-}
-.mailform_box {
-    padding: 30px 0;
 }
 .mailform_text {
     padding-bottom: 30px;
@@ -356,6 +356,11 @@ input[type="submit"] {
 }
 
 @media screen and (max-width: 1024px) {
+
+    /* 共通パーツ */
+    .top_content {
+        padding: 0 5%;
+    }
     
     /* 固定高さ解除 */
     .hero, nav, .about, .works {
@@ -363,13 +368,10 @@ input[type="submit"] {
     }
 
     /* ヒーローエリア */
-    .hero{
-        padding: 0 5%;
-    }
     .hero_box {
         padding: 30px 0;
     }
-    .hero h1{
+    .hero_title {
         font-size: 25px;
     }
     
@@ -398,7 +400,6 @@ input[type="submit"] {
     /* About */
     .about{
         background-size: cover;
-        padding: 0 5%;
     }
     .about_box {
         padding: 30px 0;
@@ -424,31 +425,16 @@ input[type="submit"] {
     /* Commitment */
     .commitment {
         background-size: cover;
-        padding: 0 5%;
-    }
-    .commitment_box {
-        padding: 30px 0;
     }
 
     /* Works */
-    .works {
-        padding: 0 5%;
-    }
-    .works ul {
-        flex-wrap: wrap;
-    }
     .works_box {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 30px 0;
-    }
-    .works_image {
-        width: 60%;
-        margin: 30px auto 0 auto;
+        align-items: center;
     }
     .works_text h3 {
         font-size: 25px;
-        padding-bottom: 0;
+        margin: 10px 0;
     }
 
     /* footer */
@@ -457,15 +443,6 @@ input[type="submit"] {
     }
     
     /* CONTACT */
-    .contact {
-        padding: 0 5%;
-    }
-    .contact_box {
-        padding: 30px 0;
-    }
-    .mailform {
-        padding: 0 5%;
-    }
     .form_item {
         align-items: flex-start;
         flex-direction: column;
@@ -479,9 +456,9 @@ input[type="submit"] {
     
      /* 戻るボタン */
     .back_button {
-    right: 10px;
-    bottom: 10px;
-}
+        right: 10px;
+        bottom: 10px;
+    }
     /* ヒーローエリア */
     .hero h1{
         font-size: 23px;
