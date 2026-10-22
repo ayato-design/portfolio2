@@ -101,24 +101,26 @@ h3 {
 .normal_list li:last-child::after {
     content: "";
 }
-
-/* ボタン */
-.button a {
+.back_page {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.back_link {
+    display: inline-block;
+    width: 25%;
+}
+.back_link a {
     background: #FFFFFF;
     color: #000000;
     border-radius: 3px;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 200px;
+    display: block;
+    text-decoration:none;
     padding: 20px;
-    transition: 0.3s ease-in-out;
 }
-.button a:hover {
+.back_link a:hover {
     background: #CF3A3A;
-    color: #FFFFFF;
+    color: #000000;
+    transition: background 1s;
 }
 
 /* パンくずリスト */
